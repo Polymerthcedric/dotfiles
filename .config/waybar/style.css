@@ -1,0 +1,63 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #cdd6f4;
+}
+
+#custom-wallpaper {
+    background: #313244;
+    margin: 2px;
+    padding: 0 12px;
+    border-radius: 15px;
+    color: #a6e3a1;
+}
+#custom-wallpaper:hover { background: #45475a; }
+
+#window {
+    background: #313244;
+    margin: 2px;
+    padding: 0 12px;
+    border-radius: 15px;
+    color: #cdd6f4;
+}
+#window:hover { background: #45475a; }
+
+#pulseaudio, #network, #custom-phone, #battery, #tray, #custom-power {
+    background: #313244;
+    margin: 2px;
+    padding: 0 12px;
+    border-radius: 15px;
+}
+
+#pulseaudio { color: #f9e2af; }
+#pulseaudio:hover { background: #45475a; }
+
+#network { color: #89dceb; }
+#network:hover { background: #45475a; }
+
+#custom-phone { color: #a6e3a1; }
+#custom-phone.disconnected { color: #f38ba8; }
+#custom-phone:hover { background: #45475a; }
+
+#battery { color: #fab387; }
+#battery.critical { color: #f38ba8; animation: blink 0.5s infinite alternate; }
+#battery:hover { background: #45475a; }
+
+#tray { color: #a6adc8; }
+#tray:hover { background: #45475a; color: #cdd6f4; }
+
+#custom-power {
+    color: #f38ba8;
+}
+#custom-power:hover { color: #f9e2af; background: #45475a; }
+
+@keyframes blink {
+    to { background-color: #f38ba8; color: #1e1e2e; }
+}

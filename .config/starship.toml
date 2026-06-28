@@ -1,0 +1,76 @@
+format = """
+$python\
+$nodejs\
+$rust\
+$golang\
+fill\
+$cmd_duration\
+$time\
+$line_break\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$character"""
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold cyan"
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style)"
+style = "bold purple"
+
+[git_status]
+style = "bold red"
+format = '([\[$all_status$ahead_behind\]]($style))'
+conflicted = "≠"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕${count}"
+up_to_date = ""
+untracked = "?"
+stashed = "⚑"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✕"
+
+[python]
+symbol = " "
+style = "bold yellow"
+format = "[$symbol$version]($style)"
+
+[nodejs]
+symbol = " "
+style = "bold green"
+format = "[$symbol$version]($style)"
+
+[rust]
+symbol = " "
+style = "bold red"
+format = "[$symbol$version]($style)"
+
+[golang]
+symbol = " "
+style = "bold cyan"
+format = "[$symbol$version]($style)"
+
+[cmd_duration]
+format = " [$duration]($style)"
+style = "bold yellow"
+show_milliseconds = false
+min_time = 2000
+
+[time]
+disabled = false
+format = " $time"
+style = "bright-black"
+use_12hr = false
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❮](bold green)"

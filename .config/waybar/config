@@ -1,0 +1,86 @@
+{
+    "layer": "top",
+    "position": "top",
+    "exclusive": false,
+    "passthrough": false,
+    "height": 34,
+    "margin-top": 0,
+    "spacing": 0,
+    
+    "modules-left": ["hyprland/window"],
+    "modules-center": [],
+    "modules-right": ["custom/wallpaper", "pulseaudio", "network", "custom/phone", "battery", "tray", "custom/power"],
+    
+    "custom/wallpaper": {
+        "format": "",
+        "on-click": "/home/cedric/.local/bin/control-panel",
+        "on-click-right": "/home/cedric/.local/bin/wall-picker",
+        "tooltip": false
+    },
+
+    "custom/phone": {
+        "exec": "/home/cedric/.local/bin/phone-battery",
+        "return-type": "json",
+        "interval": 60,
+        "on-click": "/home/cedric/.local/bin/phone-ping",
+        "on-click-right": "/home/cedric/.local/bin/phone-ring",
+        "tooltip": true
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 30,
+        "separate-outputs": true,
+        "on-click": "hyprctl dispatch fullscreen 1",
+        "on-click-right": "hyprctl dispatch togglefloating"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "on-click": "pavucontrol",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "on-click": "networkmanager_dmenu",
+        "on-click-right": "networkmanager_dmenu"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "on-click": "kitty -e powertop",
+        "on-click-right": "/home/cedric/.local/bin/battery-notifier"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "custom/power": {
+        "format": "",
+        "on-click": "/home/cedric/.local/bin/powermenu",
+        "tooltip": false
+    }
+}

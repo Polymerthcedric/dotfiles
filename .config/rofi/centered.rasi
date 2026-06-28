@@ -1,0 +1,81 @@
+* {
+    bg: #1e1e2e;
+    bg-alt: #313244;
+    fg: #cdd6f4;
+    fg-alt: #7f849c;
+    purple: #cba6f7;
+    blue: #89b4fa;
+    red: #f38ba8;
+
+    background-color: @bg;
+    
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 30%;
+    border-radius: 12px;
+    border: 2px;
+    border-color: @purple;
+    padding: 20px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    children: [inputbar, listview];
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg-alt;
+    border-radius: 8px;
+    margin: 0 0 15px 0;
+    padding: 10px;
+}
+
+prompt {
+    background-color: inherit;
+    text-color: @purple;
+    padding: 0 10px 0 0;
+}
+
+entry {
+    background-color: inherit;
+    text-color: @fg;
+    placeholder: "Search...";
+    placeholder-color: @fg-alt;
+}
+
+listview {
+    fixed-height: false;
+    dynamic: true;
+    scrollbar: false;
+    spacing: 5px;
+}
+
+element {
+    padding: 8px;
+    border-radius: 6px;
+    text-color: @fg-alt;
+}
+
+element selected {
+    background-color: @bg-alt;
+    text-color: @purple;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px 0 0;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
