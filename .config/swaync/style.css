@@ -28,7 +28,6 @@
 }
 
 /* Fallback for older CSS themes */
-/* Fallback for older CSS themes */
 @define-color cc-bg rgba(46, 46, 46, 0.7);
 @define-color noti-border-color rgba(255, 255, 255, 0.15);
 @define-color noti-bg rgba(48, 48, 48, 0.8);
@@ -42,8 +41,25 @@
 @define-color text-color rgb(255, 255, 255);
 @define-color text-color-disabled rgb(150, 150, 150);
 @define-color bg-selected rgb(0, 128, 255);
-notificationwindow, blankwindow {
+notificationwindow {
   background: transparent;
+  min-width: 0;
+  min-height: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+blankwindow {
+  background: transparent;
+}
+
+.floating-notifications {
+  display: none;
 }
 
 .notification-row {
@@ -52,10 +68,6 @@ notificationwindow, blankwindow {
 
 .control-center .control-center-list .notification-row {
   display: flex;
-}
-
-.floating-notifications {
-  display: none;
 }
 
 .close-button {
@@ -78,11 +90,6 @@ notificationwindow, blankwindow {
   background: var(--noti-close-bg-hover);
   transition: var(--hover-tranistion);
   border: none;
-}
-
-.notification-row {
-  background: none;
-  outline: none;
 }
 
 .notification-row:focus {
@@ -362,10 +369,6 @@ notificationwindow, blankwindow {
 
 .blank-window {
   /* Window behind control center and on all other monitors */
-  background: transparent;
-}
-
-.floating-notifications {
   background: transparent;
 }
 

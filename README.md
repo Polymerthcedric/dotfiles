@@ -71,3 +71,6 @@ ricesync push     # push to GitHub
 | Wallpaper | `.config/hypr/wallpaper.jpg` |
 | Fontconfig | `.config/fontconfig/` |
 | Neofetch | `.config/neofetch/` |
+| Linting | `.prettierrc`, `.eslintrc.json`, `.editorconfig` |
+| Git | `.gitconfig` |
+| Bash | `.bashrc` |
