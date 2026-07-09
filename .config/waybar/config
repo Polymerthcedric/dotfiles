@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "exclusive": false,
-    "passthrough": false,
+    "passthrough": true,
     "height": 34,
     "margin-top": 0,
     "spacing": 0,
@@ -21,7 +21,7 @@
     "custom/phone": {
         "exec": "/home/cedric/.local/bin/phone-battery",
         "return-type": "json",
-        "interval": 60,
+        "interval": 120,
         "on-click": "/home/cedric/.local/bin/phone-ping",
         "on-click-right": "/home/cedric/.local/bin/phone-ring",
         "tooltip": true
@@ -57,7 +57,7 @@
         "format-disconnected": "⚠ Disconnected",
         "tooltip-format": "{ifname} via {gwaddr}",
         "on-click": "networkmanager_dmenu",
-        "on-click-right": "networkmanager_dmenu"
+        "on-click-right": "/home/cedric/.local/bin/wifi-select"
     },
 
     "battery": {
