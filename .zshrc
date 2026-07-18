@@ -1,4 +1,4 @@
-export PATH="$HOME/.local/bin:$HOME/.opencode/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.opencode/bin:$HOME/.cargo/bin:$PATH"
 
 export EDITOR=nvim
 export VISUAL=nvim
@@ -45,6 +45,15 @@ bindkey '^g' fzf-zoxide
 
 eval "$(starship init zsh)"
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 alias ls="eza --color=auto --icons"
 alias ll="eza -l --icons --git"
 alias la="eza -la --icons --git"
@@ -69,7 +78,7 @@ alias tl="tmux list-sessions"
 alias tk="tmux kill-session -t"
 
 alias nv="nvim"
-alias zshrc="$EDITOR ~/.zshrc"
+function zshrc() { $EDITOR ~/.zshrc; }
 alias src="source ~/.zshrc"
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'

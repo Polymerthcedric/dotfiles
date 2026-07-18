@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Bash Line Editor (ble.sh) for auto-complete and syntax highlighting
-[[ $- == *i* ]] && [ -f /home/cedric/.local/share/blesh/ble.sh ] && source /home/cedric/.local/share/blesh/ble.sh --noattach
+[[ $- == *i* ]] && [ -f "$HOME/.local/share/blesh/ble.sh" ] && source "$HOME/.local/share/blesh/ble.sh" --noattach
 
 # Aliases
 alias ls='eza --icons --group-directories-first'
@@ -29,14 +29,12 @@ eval "$(zoxide init bash)"
 [ -f /usr/share/fzf/key-bindings.bash ] && . /usr/share/fzf/key-bindings.bash
 [ -f /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
 
-
-
-
 # Added by Antigravity CLI installer
-export PATH="/home/cedric/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Attach ble.sh editor at the end
-[[ $- == *i* ]] && [ -f /home/cedric/.local/share/blesh/ble.sh ] && ble-attach
+[[ $- == *i* ]] && [ -f "$HOME/.local/share/blesh/ble.sh" ] && ble-attach
 
 # opencode
-export PATH=/home/cedric/.opencode/bin:$PATH
+export PATH="$HOME/.opencode/bin:$PATH"
+. "$HOME/.cargo/env"
