@@ -59,7 +59,6 @@ ricesync push     # push to GitHub
 | Kitty | `.config/kitty/` |
 | Rofi | `.config/rofi/` |
 | Neovim | `.config/nvim/` |
-| Dunst | `.config/dunst/` |
 | Swaync | `.config/swaync/` |
 | Starship | `.config/starship.toml` |
 | Zsh | `.zshrc` |
@@ -72,5 +71,4 @@ ricesync push     # push to GitHub
 | Fontconfig | `.config/fontconfig/` |
 | Neofetch | `.config/neofetch/` |
 | Linting | `.prettierrc`, `.eslintrc.json`, `.editorconfig` |
-| Git | `.gitconfig` |
 | Bash | `.bashrc` |
