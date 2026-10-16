@@ -1,9 +1,5 @@
 # Dotfiles
 
-My Arch Linux setup. Hyprland, Waybar, Neovim, Kitty, and Starship.
+My Arch Linux desktop and development configuration: Hyprland, Waybar, Neovim, Kitty, Starship, and related tools.
 
-## The Stance
-A developer's operating system should be an extension of their mind, not a billboard for a megacorp. I reject heavy desktop environments. This configuration provides a hyper-efficient, keyboard-driven workflow. Every graphical resource is dedicated to compiling code, not rendering drop shadows on a start menu.
-
-## Installation
-Review the configs. Copy what makes you faster. Ignore the rest.
+These are personal settings, not a one-command installer. Review each file and copy only the parts that fit your setup.
