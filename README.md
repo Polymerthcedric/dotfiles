@@ -11,7 +11,7 @@ A few notes so nothing is misleading:
 - The GTK symlinks are relative, so a fresh clone resolves them without editing paths for your home directory.
 - `.config/nvim` is a LazyVim setup and keeps its own upstream license.
 - There are no secrets in this repository. Anything that needs a token lives outside it.
-- Omarchy may overwrite some of these files when it updates. That's fine. I keep this repo as a record, not as the source of truth.
+- These are `~/.config` overrides, not Omarchy internals from `/usr/share/omarchy`. Omarchy treats `~/.config` as yours, but theme changes and `omarchy reinstall configs` can change these files. I keep this repo as a record, not as the source of truth. The [Omarchy dotfiles manual](https://github.com/omacom/omarchy/blob/quattro/manual/31-dotfiles.md) explains the split better than I can.
 
 ## License
 
