@@ -1,6 +1,6 @@
 # Dotfiles
 
-I used to spend a silly amount of time ricing Arch. Gaps, borders, fonts, the same theme in six different toolkits. It was fun for a while, then it was just maintenance.
+I used to spend too much time ricing Arch. I tuned gaps, borders, fonts, and the same theme in six toolkits. I stopped when the work became maintenance.
 
 These days I run [Omarchy](https://omarchy.org/). Most of the desktop is handled for me. I still keep my own small layer on top: Catppuccin Mocha Blue, a Hyprland config, Kitty, Starship, and LazyVim. OpenCode is in the path because that's where I do most of my work now.
 
